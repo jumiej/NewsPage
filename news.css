@@ -1,0 +1,265 @@
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    border-top: 1px solid;
+    border-bottom: 0.5px solid;
+
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 0 24px;
+}
+.nav-menu{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;  
+    background-color:  #ff6760;
+}
+
+.nav-menu :hover{
+    color: blue;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ff6760  ;
+}
+
+
+@media(max-width:2560px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        /* background-color: #262626; */
+        width: 100%;
+        text-align: left;
+        transition: 0.3s;
+        width: 300px;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.below-nav {
+    margin-left: 45%;
+    color:black;
+    margin-top: 10px;
+    font-weight: 0;
+    font-size: 0.1rem;
+}
+
+
+                                            /* //SEARCH BOX// */
+
+.search-input-wrapper {
+    width: 80%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left:10%;
+    background-color: rgba(255, 247, 247, 0.5);
+    /* opacity: 0;
+    visibility: hidden;
+    transition: all .5s;  */
+}
+
+.search-input-wrapper.change {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s 1s;
+} 
+
+.search-input {
+    width: 30rem;
+}
+
+.search-input input {
+    width: 15rem;
+    background-color: transparent;
+    border: 0.1rem solid #999;
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    outline: none;
+    color: #555;
+    margin-right: 0.2rem;
+    padding: 1px;
+    align-items: center;
+}
+
+.search-input i {
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+#search-icon {
+    font-size: 1rem;
+    top: 1.7rem;
+    right: 1.5rem;
+    align-items: center;
+    animation: searchIconAnim2 .5 backwards;
+}
+
+#search-icon.change {
+    animation: searchIconAnim 1s backwards;
+}
+
+#search-icon i {
+    cursor: pointer;
+    color: black; 
+}
+
+
+@keyframes searchIconAnim {
+    0% {
+        top: 1.7rem
+    }
+
+    40% {
+        top: 40%;
+        font-size: 25rem;
+    }
+    60% {
+        top: 40%;
+        right: calc(80% + 15rem);
+    }
+
+    100% {
+        top: 1.7rem;
+        right: calc(80% + 15rem);
+
+    }
+    
+}
+
+@keyframes searchIconAnim2 {
+    0% {
+        right: calc(80% + 15ram);
+    }
+    100% {
+        right: 3rem;
+    }
+}
+
+                                        /* <!-- HERO SECTION --> */
+
+.hero-container{
+    margin-left: 30px;
+}
+
+.latest-news {
+    color: #262626;
+    font-weight: 500;
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#newsTittle {
+    color: black;
+    font-size: 20px;
+    text-decoration: rgba(0, 0, 0, 0.25);
+    font-weight: bolder;
+}
+
+img {
+    width: 100%;
+    height: 150px;
+}
+
+p {
+    width: 65%;
+    height: 100px;
+    font-size: large;
+    
+}
+
+.date {
+    font-size: smaller;
+    margin-top: 30px;
+}
+
+.list1 {
+    margin-left: 1100px;
+}
+
